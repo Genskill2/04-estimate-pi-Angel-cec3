@@ -39,5 +39,20 @@ int main(void) {
   }
 }
 
+float mc_pi(int darts)
+{
+	float cir_darts = 0;
+	float pi;
+	for(int i=1;i<=darts;i++){
+		float x = frandom();
+		float y = frandom();
+		float d = x*x+y*y;
+		if(sqrt(d) <= 1)
+			cir_darts++;
+	}
+	pi = 4*(cir_darts/darts);
+	return pi;
+}
+
 
 
